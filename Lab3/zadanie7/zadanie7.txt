@@ -1,0 +1,17 @@
+#TODO
+Wynik norm residuum dla metody bezpośredniej wynosi (residuum_norm_direct = 7.079e-13). 
+Dobry wynik residuum dla macierzy opisujące propagację pola elektromagnetycznego w zadanym filtrze mikrofalowym
+oraz dla macierzy generowanych w poprzednich zadaniach jest spowodowany niejednoznacznym sposobem rozwiazywania równan macierzowych przez operator \ w matlabie.
+Dla kontrastu rozwiazanie równan macierzowych w zadaniu 7 metodami iteracyjnymi daje nam dużo gorsze wyniki.
+Odpowiednio dla 500 iteracji:
+Norma residuum (metoda Jacobiego):        1.503e+250
+Norma residuum (metoda Gaussa-Seidla):    1.139e+05
+Dla 750 iteracji:
+Norma residuum (metoda Jacobiego):        NaN
+Norma residuum (metoda Gaussa-Seidla):    8.608e+07
+Dla 1000 iteracji:
+residuum_norm_Jacobi = NaN;
+residuum_norm_Gauss_Seidel = 6.437e+10;
+Już przy stosunkowo niedużej ilosci iteracji jaka jest 500 widzimy, że metody iteracyjne pokazuja znaczne odchylenia od poprawnego rozwiazania.
+Ponadto dla metody Jacobiego na etapie około 600 iteracji błędy numeryczne rosną i metoda przestaje dawać jakiekolwiek sensowne przybliżenie rozwiązania co powoduje zwrócenie wartosci NaN.
+Jest to spowodowanie niekompatybilnością metod iteracyjnych z rodzajem danych wejsciowych.
