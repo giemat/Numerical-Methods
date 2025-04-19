@@ -32,7 +32,6 @@ function [xvec,xdif,xsolution,ysolution,iterations] = impedance_secant()
     % Pętla główna metody siecznych
     for ii = 1:max_iterations
         % Obliczenie kolejnego przybliżenia x2 metodą siecznych
-        % x2 = x1 - f1*(x1 - x0) / (f1 - f0)
         x2 = x1 - f1 * (x1 - x0) / (f1 - f0);
         f2 = impedance_difference(x2);
         
